@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default parameter</title>
+</head>
+<body>
+    <section>
+        <div>
+            <h1><u><b>Default Parameter:</b></u></h1>
+            <list>
+                <ol>
+                    <li><i>what is default parameter.</i></li>
+                    <li><i>make function.</i></li>
+                    <li><i>use default params.</i></li>
+                    <li><i>pass function and params.</i></li>
+                    <li><i>interview questions</i></li>
+                </ol>
+            </list>
+        </div>
+    </section>
+    <section>
+        <div>
+            <script>
+                //without default parameter
+                function add(a,b){
+                    return a + b;
+                };
+                console.log(add(10,20));
+            </script>
+            <script>
+                //with one default parameter
+                function add1(a,b=10){
+                    return a + b;
+                };
+                console.log(add1(5));
+                //with both default parameter moreover one of them is function
+                function add2(a=2,b=add1(8)){
+                    return a + b;
+                }
+                console.log(add2())
+            </script>
+            <script>
+                //passing string in default parameter
+                function full_name(first_name="kanaya",mid_name="lal",last_name="gangai"){
+                    return `${first_name} ${mid_name} ${last_name}`;
+                };
+                console.log(full_name());
+
+                //some extra question
+                function main(a, b=main()){
+                    return a + b;
+                };
+                main()
+            </script>
+        </div>
+    </section>
+    
+</body>
+</html>
