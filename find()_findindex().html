@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find() and find.index()</title>
+</head>
+<body>
+    <header></header>
+        <article>
+            <h2>find() and findindex()</h2>
+            <list>
+                <ol>
+                    <li>why we use find() and findindex().</li>
+                    <li>Example with arrays.</li>
+                    <li>Example with array of object</li>
+                    <li>Example with custom function</li>
+                </ol>
+            </list>
+        </article>    
+    </header>
+    <main>
+        <section>
+            <script>
+                //example with array:
+                let data = [1,19,20,18,21,30];
+                let array = (item)=> item>5 && item <19;
+                let result=data.find(array)
+                console.log(result)
+                //another example:
+                let arr1 = data.find((item)=>item<20);
+                console.log(arr1)
+                //ezample of findindex():
+                let arr2 = data.findIndex((item)=> item>20);
+                console.log(arr2)
+                //example:
+                function data1(item){
+                    return item < 10;
+                };
+                console.log(data.findIndex(data1))
+                //example with array of object:
+                data2 = [
+                    {id:1, name:"pradip"},
+                    {id:2, name:"pramila"},
+                    {id:3, name:"ishita"},
+                    {id:4, name:"pranisha"}
+                ]
+                let arr3 = data2.find((item)=> item.id > 3);
+                console.log(arr3)
+                //example:
+                let arr4 = data2.findIndex((item)=>item.id < 2);
+                console.log(arr4)
+                //example:
+                let arr5 = data2.find((item)=>item.name = "pramila")
+                console.log(arr5)
+                //example:
+                let arr6 = data2.findIndex((item)=>item.name = "pradip")
+                console.log(arr6)
+            </script>
+        </section>
+    </main>
+</body>
+</html>
