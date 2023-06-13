@@ -2,4 +2,6 @@
 function main(a, b=main()){
     return a + b;
 };
-main()
+main() // output=RangeError: Maximum call stack size exceeded
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literals</title>
+</head>
+<body>
+    <section>
+        <article>
+            <header>
+                <h2>Template Literals</h2>
+            </header>
+            <list>
+                <ol>
+                    <li>What is template Literals.</li>
+                    <li>How to use it.</li>
+                    <li>use function and some operations.</li>
+                    <li>Interview questions.</li>
+                </ol>
+            </list>
+            <p>It is done with the help of back tick. It is used to elimulate the difficulties occured during the concate of different statements.
+                it is use with the two back tick and doller sign and curley bracket: `${} `</p>
+        </article>
+    </section>
+    <section>
+        <dev>
+            <script>
+                let a=10;
+                let b=20;
+                console.log(`The sum of ${a} and ${b} is ${a+b}`)
+
+                
+                let Temp = (a,b) => `${a} and ${b}`
+                let add = (a,b) => a+b;
+                console.log(` the sum of ${Temp(2,3)} is ${add(2,3)}`);
+            </script>
+        </dev>
+    </section>
+    
+</body>
+</html>
