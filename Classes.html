@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classes</title>
+</head>
+<body>
+    <script>
+        // class rectangule {
+        //     constructor(){
+        //         console.log("this is a rectangule");
+
+        //         this.length = 5;
+        //         this.breadth = 10;
+        //         this.color = "Green";
+        //     }
+        // }
+        // let rectangle1 = new rectangule
+        // //step 2:
+         
+        // class triangle {
+        //     constructor(_a,_b,_c){
+        //         console.log("this is a triangle")
+
+        //         this.a = _a
+        //         this.b = _b
+        //         this.c = _c
+        //     }
+
+        //     getPerimeter(){
+        //         return this.a + this.b + this.c
+        //     }
+
+        //     printDesc(){
+        //         console.log(`I am a triangle with sides ${this.a},${this.b},${this.c}`)
+        //     }
+        // }
+        // let mytrangle = new triangle(10,2,5)
+        // let mytrangle1 = new triangle(1,2,3)
+        // console.log(mytrangle.getPerimeter())
+        // mytrangle1.printDesc()
+
+        // class: Getters and Setters
+        // It looks like properties of class but they are methods of class
+        class square {
+            constructor(_width) {
+                this.width = _width;
+                this.heigth = _width;
+            }
+
+            get Area() {
+                return this.width * this.height;
+            }
+        }
+
+        let AreaOfSquare = new square(32);
+        console.log(AreaOfSquare.Area);
+
+    </script>
+</body>
+</html>
