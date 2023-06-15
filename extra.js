@@ -11,7 +11,7 @@ class Square {
         return this.width * this.heigth;
     }
 
-    set Arearea (Area){
+    set Area(Area){
         this.width = Math.sqrt(Area);
         this.heigth = this.width;
     }
@@ -43,8 +43,19 @@ class square1 {
         return a.width*a.heigth === b.width*b.heigth?"equall":"not equall";
 
     }
+
+    static IsValid(a,b){
+        return a.width === b.width && a.heigth ===b.heigth;
+    }
 }
 
+
+
 let square_a = new square1(8);
-let square_b = new square1(8)
+let square_b = new square1(8);
+console.log(square1.IsValid(square_a, square_b))
+
 console.log(square1.equall(square_a,square_b))
+
+// Classes: Inheritance and Extends
+
