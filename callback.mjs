@@ -227,9 +227,9 @@ let ingradient = () => {
     mathoperation(a,b);
  }
 
-let mathoperation = () => {
-    add()
-    multiple()
+let mathoperation = (a,b) => {
+    add(a,b)
+    multiple(a,b)
 
  }
  let add = (a,b) => {
@@ -241,3 +241,42 @@ let multiple = (a,b) => {
 }
 
  getNum(3,6)
+
+
+ const items = {
+    fruits:['apple','mango','orange','straberry'],
+    liquid:['ice','water'],
+    holder:['cup','bowl'],
+    tops:['capacheno','chocklet','ice-cream']
+ }
+
+ let selection = (fruits) => {
+    setTimeout(() => {
+        console.log(`I want :${items.fruits[fruits]}`);
+        setTimeout(()=>{
+            console.log(`the fruits has been chopped!`)
+            setTimeout(liq=>{
+                console.log(`${items.liquid[0]} has been added,`)
+                setTimeout(()=>{
+                    console.log(`The machine is started,`)
+                    setTimeout(()=>{
+                        console.log(`i would select ${items.tops[1]} as topings,`)
+                        setTimeout(()=>{
+                            console.log(`let's serve it.`)
+                        },1000)
+                    },3000)
+                },1000)
+            },2000)
+        },1000);
+    },2000);
+    ask()
+ }
+
+ let ask = () => {
+    console.log(`what do you want sir/mam?`)
+ }
+
+
+ selection(2,ask)
+
+ 
