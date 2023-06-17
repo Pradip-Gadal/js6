@@ -7,13 +7,15 @@ const items = {
 
  isShopOpen = true;
 
- let order = () => {
-    return new promise((work,time)=>{
+ let order = (work, time) => {
+    return new promise((resolve,reject)=>{
         if(isShopOpen){
-            setTimeout(()=>{return(work())}, time)
+            setTimeout(()=>{resolve(work())}, time)
         }
         else {
-            console.log(`Shop is closed.`)
+            reject(console.log(`Shop is closed.`))
         }
     })
  }
+ 
+ order(items.fruits[1], 2000)
